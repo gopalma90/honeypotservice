@@ -23,8 +23,10 @@ How to Test:
   
 Potential issues:
   1. The port may not be open in the host terminal. If thats the case, the service wont be able to receive any request from client & vice-versa. Please open the port by running the following command 
+  
     For linux:
       1. sudo ufw allow 8080
+  
     For windows:
       1. Open windows firewall and configure port 8080 to allow traffic. 
   
