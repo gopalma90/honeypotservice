@@ -4,10 +4,16 @@
 2. Doesn't handle any other request( ex, put, post, etc)
 3. For simplicity the service layer is ignored, and response is sent from controller. 
 
+To build and run locally:
+1. Download the repo, and the command  "mvn clean install". 
+2. run "java -jar target/honeypotService-0.0.1-SNAPSHOT.jar"
+
+
 How to build and run in docker:
-1. Download the repo, and run " docker build -t honeypotservice ." command
-2. This should build the image. 
-3. Run the below command "docker run -p 8080:8080 <image id >". 
+1. Download the repo, and the command  "mvn clean install". 
+2. Run "docker build -t honeypotservice ." command
+3. This should build the docker image. 
+4. Run the below command "docker run -p 8080:8080 <image id >". 
   Note: Image id can be obtained from running "docker images" command. The id corresponding to the honeypotservice image is the image id
   
 How to Test:
@@ -16,7 +22,7 @@ How to Test:
   
   
 Potential issues:
-  1. sometimes the port may not be open in the host terminal. If thats the case, the serivce wont receive any request from client & vice-versa. Please open the port by running the following command 
+  1. The port may not be open in the host terminal. If thats the case, the service wont be able to receive any request from client & vice-versa. Please open the port by running the following command 
     For linux:
       1. sudo ufw allow 8080
     For windows:
